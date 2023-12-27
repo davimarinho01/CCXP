@@ -52,21 +52,30 @@
             <div>
                 <p id="count-text">PARA A MAIOR CCXP DE TODOS OS TEMPOS</p>  
             </div> 
-            <video width="780px" height="414px" controls loop><source src="Videos/Arlequina.mp4" type="video/mp4"></video>
+            <video width="780px" height="408px" controls loop><source src="Videos/Arlequina.mp4" type="video/mp4"></video>
         </div>
     </section>
     <div id="tickets">
         <div>
             <h1>Ainda dá tempo de garantir o seu, mas corre!</h1>
-            <img width="180px" src="Imagens/qui.svg" >
-            <img width="180px" src="Imagens/sex.svg" >
-            <img width="180px" src="Imagens/sab.svg" >
-            <img width="180px" src="Imagens/dom.svg" >
+            <img class="cards-ingressos" width="180px" src="Imagens/qui.svg" onclick="selectCard('#quinta')" onmouseover = "highlightCard('#quinta')"  onmouseleave="highlightCard('#quinta')" id="quinta">
+            <img class="cards-ingressos" width="180px" src="Imagens/sex.svg" onclick="selectCard('#sexta')" onmouseover = "highlightCard('#sexta')"   onmouseleave="highlightCard('#sexta')" id="sexta">
+            <img class="cards-ingressos" width="180px" src="Imagens/sab.svg" onclick="selectCard('#sabado')" onmouseover = "highlightCard('#sabado')"  onmouseleave="highlightCard('#sabado')" id="sabado">
+            <img class="cards-ingressos" width="180px" src="Imagens/dom.svg" onclick="selectCard('#domingo')" onmouseover = "highlightCard('#domingo')" onmouseleave="highlightCard('#domingo')"  id="domingo">
         </div>
         <div>
-            <input id="botao" type="button" value="GARANTA O SEU!">
+            <input onclick="showSelectCards()" id="botao" type="button" value="GARANTA O SEU!">
         </div>
     </div>
+
+    <div id="form">
+        <form action="https://www.google.com">
+            <input type="email" placeholder="Seu email" required />
+            <input type="submit" />
+        </form>
+    </div>
     <script src="script.js"></script>
+    <script src="main.js"></script>
+    
 </body>
 </html>
